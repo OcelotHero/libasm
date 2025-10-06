@@ -1,0 +1,11 @@
+*
+!inc/
+!**/inc/**
+!src/
+!**/src/**
+!*.s
+!*.h
+!*.c
+!*.inc
+!Makefile
+!.gitignore
