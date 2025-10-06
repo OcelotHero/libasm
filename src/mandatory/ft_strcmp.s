@@ -2,11 +2,11 @@
 
         bits    64
 
-        global  FCT_NAME(ft_strcmp)
+        global  FT_STRCMP
 
         section .text
 ; int ft_strcmp(const char *s1, const char *s2)
-FCT_NAME(ft_strcmp):
+FT_STRCMP:
         xor     rcx, rcx
 
 .loop:

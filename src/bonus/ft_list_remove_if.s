@@ -30,13 +30,13 @@
 
         bits        64
 
-        extern      FCT_NAME(free)
+        extern      FREE
 
-        global      FCT_NAME(ft_list_remove_if)
+        global      FT_LST_REM_IF
 
         section .text
 ; void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)(), void (*free_fct)(void *))
-FCT_NAME(ft_list_remove_if):
+FT_LST_REM_IF:
         test    rdi, rdi
         jz      .end
         test    rdx, rdx
@@ -94,7 +94,7 @@ FCT_NAME(ft_list_remove_if):
         push    rcx
         mov     rdi, rdx                ; rdi = curr
         sub     rsp, 8
-        call    FCT_NAME(free) PLT_SUFFIX         ; call free
+        call    FREE PLT_SUFFIX         ; call free
         add     rsp, 8
         pop     rcx
 

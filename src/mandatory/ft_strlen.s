@@ -2,11 +2,11 @@
 
         bits    64
 
-        global  FCT_NAME(ft_strlen)
+        global  FT_STRLEN
 
         section .text
 ; size_t ft_strlen(const char *str)
-FCT_NAME(ft_strlen):
+FT_STRLEN:
         xor     rax, rax
 
 .loop:

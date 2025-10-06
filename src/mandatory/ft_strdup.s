@@ -3,26 +3,26 @@
         bits    64
         
         extern  ERRSYM
-        extern  FCT_NAME(ft_strlen)
-        extern  FCT_NAME(ft_strcpy)
-        extern  FCT_NAME(malloc)
+        extern  FT_STRLEN
+        extern  FT_STRCPY
+        extern  MALLOC
 
-        global  FCT_NAME(ft_strdup)
+        global  FT_STRDUP
 
         section .text
 ; char *ft_strdup(const char *s1);
-FCT_NAME(ft_strdup):
+FT_STRDUP:
         push    rdi             ; save *s1
-        call    FCT_NAME(ft_strlen)
+        call    FT_STRLEN
         inc     rax
         mov     rdi, rax
-        call    FCT_NAME(malloc) PLT_SUFFIX
+        call    MALLOC PLT_SUFFIX
         cmp     rax, 0
         je      .end
         
         mov     rdi, rax        ; *dst
         mov     rsi, [rsp]      ; *src
-        call    FCT_NAME(ft_strcpy)
+        call    FT_STRCPY
 
 .end:
         add     rsp, 8          ; clean up stack

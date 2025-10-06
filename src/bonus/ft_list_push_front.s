@@ -2,18 +2,18 @@
 
         bits        64
 
-        extern      FCT_NAME(malloc)
+        extern      MALLOC
 
-        global      FCT_NAME(ft_list_push_front)
+        global      FT_LST_PUSH_F
 
         section .text
 ; void ft_list_push_front(t_list **begin_list, void *data)
-FCT_NAME(ft_list_push_front):
+FT_LST_PUSH_F:
         push    rdi
         push    rsi
         sub     rsp, 8                  ; align stack
         mov     rdi, 16
-        call    FCT_NAME(malloc) PLT_SUFFIX
+        call    MALLOC PLT_SUFFIX
         add     rsp, 8
         pop     rsi
         pop     rdi

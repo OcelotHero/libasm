@@ -2,11 +2,11 @@
 
         bits    64
 
-        global  FCT_NAME(ft_atoi_base)
+        global  FT_ATOI_BASE
 
         section .text
 ; int ft_atoi_base(char *str, char *base)
-FCT_NAME(ft_atoi_base):
+FT_ATOI_BASE:
         xor     rax, rax
         xor     r8, r8
         xor     r9, r9

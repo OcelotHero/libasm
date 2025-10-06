@@ -2,11 +2,11 @@
 
         bits    64
 
-        global  FCT_NAME(ft_strcpy)
+        global  FT_STRCPY
 
         section .text
 ; char *ft_strcpy(char *dst, const char *src)
-FCT_NAME(ft_strcpy):
+FT_STRCPY:
         xor     rcx, rcx
 
 .loop:

@@ -4,11 +4,11 @@
         
         extern  ERRSYM
 
-        global  FCT_NAME(ft_write)
+        global  FT_WRITE
 
         section .text
 ; ssize_t ft_write(int fd, const void *buf, size_t count);
-FCT_NAME(ft_write):
+FT_WRITE:
         mov     rax, WRITE      ; write
         syscall                 ; rdi = fd, rsi = *buf, rdx = count already set
         cmp     rax, 0

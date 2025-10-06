@@ -2,11 +2,11 @@
 
         bits        64
 
-        global      FCT_NAME(ft_list_size)
+        global      FT_LST_SIZE
 
         section .text
 ; int ft_list_size(t_list *begin_list)
-FCT_NAME(ft_list_size):
+FT_LST_SIZE:
         xor     rax, rax
 
 .ft_list_size_loop:
