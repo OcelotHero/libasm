@@ -2,11 +2,11 @@
 
         bits        64
 
-        global      ft_list_sort
+        global      FCT_NAME(ft_list_sort)
 
         section .text
 ; void ft_list_sort(t_list **begin_list, int (*cmp)())
-ft_list_sort:
+FCT_NAME(ft_list_sort):
         test    rdi, rdi
         jz      .end
         test    rsi, rsi

@@ -1,10 +1,12 @@
+%include "macros.inc"
+
         bits    64
 
-        global  ft_strcmp
+        global  FCT_NAME(ft_strcmp)
 
         section .text
 ; int ft_strcmp(const char *s1, const char *s2)
-ft_strcmp:
+FCT_NAME(ft_strcmp):
         xor     rcx, rcx
 
 .loop:

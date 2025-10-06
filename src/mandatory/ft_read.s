@@ -4,11 +4,11 @@
         
         extern  ERRSYM
 
-        global  ft_read
+        global  FCT_NAME(ft_read)
 
         section .text
 ; ssize_t ft_read(int fd, void *buf, size_t count)
-ft_read:
+FCT_NAME(ft_read):
         mov     rax, READ       ; read
         syscall                 ; rdi = fd, rsi = *buf, rdx = count already set
         cmp     rax, 0

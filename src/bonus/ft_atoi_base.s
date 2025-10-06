@@ -1,10 +1,12 @@
+%include "macros.inc"
+
         bits    64
 
-        global  ft_atoi_base
+        global  FCT_NAME(ft_atoi_base)
 
         section .text
 ; int ft_atoi_base(char *str, char *base)
-ft_atoi_base:
+FCT_NAME(ft_atoi_base):
         xor     rax, rax
         xor     r8, r8
         xor     r9, r9
