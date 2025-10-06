@@ -3,7 +3,7 @@
 %define PLT_SUFFIX
 %define WRITE           0x2000004
 %define READ            0x2000003
-%define FCT_NAME(name)  _name
+%define FCT_NAME(name)  _ %+ name
 %else
 %define ERRSYM          __errno_location
 %define PLT_SUFFIX      wrt ..plt

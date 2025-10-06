@@ -7,11 +7,11 @@
         extern  FCT_NAME(ft_strcpy)
         extern  FCT_NAME(malloc)
 
-        global  ft_strdup
+        global  FCT_NAME(ft_strdup)
 
         section .text
 ; char *ft_strdup(const char *s1);
-ft_strdup:
+FCT_NAME(ft_strdup):
         push    rdi             ; save *s1
         call    FCT_NAME(ft_strlen)
         inc     rax
